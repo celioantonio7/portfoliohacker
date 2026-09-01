@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="pageTitle">Alex Vance // Elite Cybersecurity Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/share-tech-mono@5.0.8/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/orbitron@5.0.8/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/rajdhani@5.0.8/index.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="components/cards.css">
+<link rel="stylesheet" href="components/modal.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="js/main.js"></script>
+</head>
+<body>
+
+<!-- Terminal Preloader / Splash Screen -->
+<div id="splashScreen" class="splash-screen">
+  <div class="splash-terminal-box">
+    <div class="splash-terminal-header">
+      <div class="terminal-dot red"></div>
+      <div class="terminal-dot yellow"></div>
+      <div class="terminal-dot green"></div>
+      <div class="splash-terminal-title">// SYSTEM_BOOT // VANCE_SEC_OS v4.0.9</div>
+      <button id="splashBypassBtn" class="splash-bypass-btn" title="Pular introdução">[ FAST_ACCESS ]</button>
+    </div>
+    <div class="splash-terminal-body">
+      <div id="splashOutput" class="splash-output"></div>
+      <div id="splashInputLine" class="splash-input-line hidden">
+        <span class="splash-prompt">guest@vance-sec:~$</span>
+        <input type="text" id="splashInput" placeholder="sudo start..." autocomplete="off" spellcheck="false" autofocus>
+      </div>
+      <div id="splashHint" class="splash-hint hidden" data-i18n-html="splash.hint">
+        💡 Digite <span class="highlight-cmd">sudo start</span> ou pressione <strong>Enter</strong> para inicializar o sistema.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+<canvas id="bg3d"></canvas>
+<canvas id="matrix"></canvas>
+<div class="scanline"></div>
+
+<nav>
+  <div class="logo">
+    <div class="logo-icon"></div>
+    <span data-i18n="nav.name">Alex Vance</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+    <li><a href="#about" data-i18n="nav.about">Perfil</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Especialidades</a></li>
+    <li><a href="#services" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Cases</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+  </ul>
+  <div class="status">
+    <span class="status-dot"></span><span data-i18n="nav.status">SECURE // ONLINE</span>
+    <button id="langToggle" class="lang-toggle" aria-label="Alterar idioma">🌐 <span id="langLabel">PT</span></button>
+    <button id="themeToggle" class="theme-toggle" data-i18n="nav.lightMode">LIGHT_MODE</button>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-tag" data-i18n="hero.tag">ESPECIALISTA EM CIBERSEGURANÇA OFENSIVA</div>
+    <h1><span class="glitch" data-text="Alex Vance" data-i18n="hero.title" data-i18n-glitch>Alex Vance</span></h1>
+    <h2 data-i18n="hero.subtitle">&gt; Encontrar vulnerabilidades antes que elas se tornem incidentes_</h2>
+    <p data-i18n="hero.description">Pentest, segurança de aplicações, APIs, infraestrutura e ambientes cloud. Avaliações técnicas orientadas a risco para empresas que precisam descobrir, priorizar e corrigir vulnerabilidades antes que sejam exploradas.</p>
+    <div class="hero-buttons">
+      <a href="#services" class="btn primary" data-i18n="hero.btnServices">Conhecer os serviços →</a>
+      <a href="#contact" class="btn" data-i18n="hero.btnContact">Solicitar uma avaliação</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hex-grid" id="hexGrid"></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-sub" data-i18n="about.sub">SOBRE // PERFIL</div>
+  <h2 class="section-title reveal" data-i18n="about.title">Segurança ofensiva com visão defensiva</h2>
+  <div class="about">
+    <div class="terminal reveal">
+      <div class="terminal-header">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+        <div class="terminal-title" id="terminalTitle">root@vance-sec:~# ./perfil.sh</div>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div><span class="prompt">root@vance-sec:~$</span> <span class="cmd" data-i18n="about.cmdWhoami">whoami</span></div>
+        <div class="out" data-i18n="about.outWhoami">security_assessment_specialist</div>
+        <div><span class="prompt">root@vance-sec:~$</span> <span class="cmd" data-i18n="about.cmdSpecs">cat especialidades.txt</span></div>
+        <div id="terminalSpecs">
+          <div class="out">[+] Pentest Web & API</div>
+          <div class="out">[+] Segurança de Redes</div>
+          <div class="out">[+] Cloud Security</div>
+          <div class="out">[+] Vulnerability Assessment</div>
+          <div class="out">[+] Threat Hunting</div>
+          <div class="out">[+] Security Architecture</div>
+        </div>
+        <div><span class="prompt">root@vance-sec:~$</span> <span class="cmd" data-i18n="about.cmdMethod">cat metodologia.txt</span></div>
+        <div id="terminalMethod">
+          <div class="out">[+] Reconhecimento</div>
+          <div class="out">[+] Mapeamento da superfície de ataque</div>
+          <div class="out">[+] Validação técnica</div>
+          <div class="out">[+] Exploração controlada</div>
+          <div class="out">[+] Análise de impacto</div>
+          <div class="out">[+] Remediação</div>
+        </div>
+        <div><span class="prompt">root@vance-sec:~$</span> <span class="cursor-blink"></span></div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <h3 data-i18n-html="about.heading">Encontrar falhas.<br>Reduzir riscos.<br>Fortalecer sistemas.</h3>
+      <p data-i18n="about.p1">Atuo com avaliações de segurança ofensiva, análise de vulnerabilidades e revisão de ambientes tecnológicos. O trabalho combina reconhecimento técnico, validação manual, análise de impacto e recomendações práticas de correção.</p>
+      <p data-i18n="about.p2">A metodologia utiliza referências reconhecidas pela indústria, incluindo OWASP Top 10, MITRE ATT&CK e CVSS, permitindo transformar descobertas técnicas em prioridades de segurança compreensíveis para equipes técnicas e gestores.</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num" data-target="120">0</div>
+          <div class="stat-label" data-i18n="about.stat1Label">Avaliações Técnicas*</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="380">0</div>
+          <div class="stat-label" data-i18n="about.stat2Label">Achados de Segurança*</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="96">0</div>
+          <div class="stat-label" data-i18n="about.stat3Label">Achados Remediados*</div>
+        </div>
+      </div>
+      <p style="font-size: 11px; margin-top: 10px; color: var(--dim);" data-i18n="about.statNote">*Indicadores demonstrativos utilizados exclusivamente nesta apresentação.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-sub" data-i18n="skills.sub">CAPACIDADES // ESPECIALIDADES</div>
+  <h2 class="section-title reveal" data-i18n="skills.title">Expertise Técnica</h2>
+  <div class="skills-grid">
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.webApi.name">Pentest Web & API</div><div class="skill-pct">95%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="95"></div></div>
+      <div class="skill-desc" data-i18n="skills.webApi.desc">Avaliação de aplicações web e APIs com foco em autenticação, autorização, controle de acesso e exposição de dados.</div>
+    </div>
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.network.name">Segurança de Redes</div><div class="skill-pct">90%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+      <div class="skill-desc" data-i18n="skills.network.desc">Avaliação da superfície de exposição, serviços, configurações, segmentação de rede e controles de acesso.</div>
+    </div>
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.cloud.name">Cloud Security</div><div class="skill-pct">92%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="92"></div></div>
+      <div class="skill-desc" data-i18n="skills.cloud.desc">Avaliação de ambientes AWS, Azure e GCP, com foco em identidade, permissões, redes e workloads.</div>
+    </div>
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.vuln.name">Vulnerability Assessment</div><div class="skill-pct">94%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="94"></div></div>
+      <div class="skill-desc" data-i18n="skills.vuln.desc">Mapeamento, validação e priorização de vulnerabilidades utilizando métricas de severidade como o CVSS 4.0.</div>
+    </div>
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.hunting.name">Threat Hunting</div><div class="skill-pct">87%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="87"></div></div>
+      <div class="skill-desc" data-i18n="skills.hunting.desc">Investigação proativa de comportamentos suspeitos e possíveis sinais de atividade maliciosa.</div>
+    </div>
+    <div class="skill reveal">
+      <div class="skill-head"><div class="skill-name" data-i18n="skills.arch.name">Security Architecture</div><div class="skill-pct">89%</div></div>
+      <div class="skill-bar"><div class="skill-fill" data-pct="89"></div></div>
+      <div class="skill-desc" data-i18n="skills.arch.desc">Análise de arquitetura e recomendações para melhorar gestão de identidade, proteção de dados e controles.</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-sub" data-i18n="services.sub">SERVIÇOS // OPERAÇÕES</div>
+  <h2 class="section-title reveal" data-i18n="services.title">Avaliações de segurança sob medida</h2>
+  <div class="services-grid">
+    <div class="service reveal">
+      <div class="service-icon">🛡️</div>
+      <h3 data-i18n="services.pentest.title">Pentest</h3>
+      <p data-i18n="services.pentest.desc">Identificação e validação controlada de vulnerabilidades em sistemas e aplicações.</p>
+      <ul class="service-list" id="srvListPentest">
+        <li>Aplicações Web & APIs</li>
+        <li>Infraestrutura & Redes</li>
+        <li>Ambientes Cloud</li>
+        <li>Recomendações de correção</li>
+      </ul>
+    </div>
+    <div class="service reveal">
+      <div class="service-icon">⚔️</div>
+      <h3 data-i18n="services.redteam.title">Red Team</h3>
+      <p data-i18n="services.redteam.desc">Simulações controladas de adversários para avaliar a capacidade de prevenir, detectar e responder a ataques.</p>
+      <ul class="service-list" id="srvListRedteam">
+        <li>Mapeamento de superfície</li>
+        <li>Simulação de ameaças</li>
+        <li>Testes de detecção</li>
+        <li>MITRE ATT&CK</li>
+      </ul>
+    </div>
+    <div class="service reveal">
+      <div class="service-icon">☁️</div>
+      <h3 data-i18n="services.cloud.title">Cloud Security</h3>
+      <p data-i18n="services.cloud.desc">Avaliação da postura de segurança dos ambientes cloud e arquitetura em nuvem.</p>
+      <ul class="service-list" id="srvListCloud">
+        <li>AWS / Azure / GCP</li>
+        <li>IAM & Storage</li>
+        <li>Containers & Network</li>
+        <li>Configurações de segurança</li>
+      </ul>
+    </div>
+    <div class="service reveal">
+      <div class="service-icon">🔍</div>
+      <h3 data-i18n="services.vuln.title">Vulnerability Assessment</h3>
+      <p data-i18n="services.vuln.desc">Descoberta e priorização de vulnerabilidades utilizando métricas claras e orientadas a risco.</p>
+      <ul class="service-list" id="srvListVuln">
+        <li>Inventário de ativos</li>
+        <li>Scanning & Validação manual</li>
+        <li>Classificação de risco</li>
+        <li>Plano de remediação</li>
+      </ul>
+    </div>
+    <div class="service reveal">
+      <div class="service-icon">🚨</div>
+      <h3 data-i18n="services.incident.title">Incident Response</h3>
+      <p data-i18n="services.incident.desc">Apoio técnico na investigação e resposta a incidentes de segurança de forma rápida e eficiente.</p>
+      <ul class="service-list" id="srvListIncident">
+        <li>Análise de evidências</li>
+        <li>Contenção & Investigação</li>
+        <li>Indicadores de comprometimento</li>
+        <li>Análise pós-incidente</li>
+      </ul>
+    </div>
+    <div class="service reveal">
+      <div class="service-icon">🎓</div>
+      <h3 data-i18n="services.awareness.title">Security Awareness</h3>
+      <p data-i18n="services.awareness.desc">Programas de conscientização e treinamento para equipes técnicas e colaboradores.</p>
+      <ul class="service-list" id="srvListAwareness">
+        <li>Segurança para desenvolvedores</li>
+        <li>Phishing simulado autorizado</li>
+        <li>Workshops & Boas práticas</li>
+        <li>Cultura de segurança</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-sub" data-i18n="projects.sub">OPERAÇÕES // CASES</div>
+  <h2 class="section-title reveal" data-i18n="projects.title">Projetos Demonstrativos</h2>
+  <div class="projects-grid">
+    <div class="project reveal">
+      <div class="project-img">
+        <div class="project-tag" data-i18n="projects.nightfall.tag">WEB PENTEST</div>
+        <div class="project-code">
+$ assessment --scope web-application<br><br>
+[+] 37 endpoints identificados<br>
+[+] 12 áreas de autenticação analisadas<br>
+[+] 08 achados registrados<br>
+<span style="color:var(--red)">[+] 02 críticos</span><br>
+<span style="color:var(--cyan)">[+] RELATÓRIO GERADO</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3 data-i18n="projects.nightfall.title">Operação Nightfall</h3>
+        <p data-i18n="projects.nightfall.desc">Avaliação demonstrativa de uma aplicação corporativa fictícia com problemas de controle de acesso.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Web</span>
+          <span class="tech-tag">API</span>
+          <span class="tech-tag">OWASP</span>
+          <span class="tech-tag">CVSS</span>
+        </div>
+        <div class="project-links">
+          <a href="#projects" class="open-modal" data-case="nightfall" data-i18n="projects.viewCase">[VER CASE →]</a>
+        </div>
+      </div>
+    </div>
+    <div class="project reveal">
+      <div class="project-img">
+        <div class="project-tag" data-i18n="projects.ironcloud.tag">CLOUD SECURITY</div>
+        <div class="project-code">
+$ cloud-audit --environment production<br><br>
+[+] 184 recursos analisados<br>
+[+] IAM review ........ COMPLETE<br>
+[+] Network review .... COMPLETE<br>
+[+] Storage review .... COMPLETE<br>
+<span style="color:var(--cyan)">[+] ASSESSMENT COMPLETE</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3 data-i18n="projects.ironcloud.title">Project Iron Cloud</h3>
+        <p data-i18n="projects.ironcloud.desc">Assessment demonstrativo de infraestrutura cloud fictícia avaliando permissões e exposição de recursos.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Cloud</span>
+          <span class="tech-tag">IAM</span>
+          <span class="tech-tag">Containers</span>
+          <span class="tech-tag">Security Architecture</span>
+        </div>
+        <div class="project-links">
+          <a href="#projects" class="open-modal" data-case="ironcloud" data-i18n="projects.viewCase">[VER CASE →]</a>
+        </div>
+      </div>
+    </div>
+    <div class="project reveal">
+      <div class="project-img">
+        <div class="project-tag" data-i18n="projects.blackbox.tag">RED TEAM</div>
+        <div class="project-code">
+$ redteam --scope authorized<br><br>
+[+] Reconhecimento ........ COMPLETE<br>
+[+] Attack Surface ........ MAPPED<br>
+[+] Security Controls ..... TESTED<br>
+[+] Detection ............. EVALUATED<br>
+<span style="color:var(--cyan)">[+] ENGAGEMENT COMPLETE</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3 data-i18n="projects.blackbox.title">Operação Blackbox</h3>
+        <p data-i18n="projects.blackbox.desc">Simulação controlada de adversário para avaliar capacidade de prevenção, detecção e resposta da equipe.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Red Team</span>
+          <span class="tech-tag">Detection</span>
+          <span class="tech-tag">MITRE ATT&CK</span>
+        </div>
+        <div class="project-links">
+          <a href="#projects" class="open-modal" data-case="blackbox" data-i18n="projects.viewCase">[VER CASE →]</a>
+        </div>
+      </div>
+    </div>
+    <div class="project reveal">
+      <div class="project-img">
+        <div class="project-tag" data-i18n="projects.apisentinel.tag">API SECURITY</div>
+        <div class="project-code">
+$ api-assessment --target authorized-api<br><br>
+[+] 96 endpoints analisados<br>
+[+] Authentication ........ REVIEWED<br>
+[+] Input validation ...... TESTED<br>
+[+] Data exposure ........ REVIEWED<br>
+<span style="color:var(--cyan)">[+] SECURITY REVIEW COMPLETE</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3 data-i18n="projects.apisentinel.title">API Sentinel</h3>
+        <p data-i18n="projects.apisentinel.desc">Avaliação demonstrativa de uma API corporativa com foco em autenticação e exposição de dados.</p>
+        <div class="project-tech">
+          <span class="tech-tag">REST</span>
+          <span class="tech-tag">API</span>
+          <span class="tech-tag">OAuth</span>
+          <span class="tech-tag">JWT</span>
+        </div>
+        <div class="project-links">
+          <a href="#projects" class="open-modal" data-case="apisentinel" data-i18n="projects.viewCase">[VER CASE →]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-sub" data-i18n="contact.sub">CONTATO // CANAL SEGURO</div>
+  <h2 class="section-title reveal" data-i18n="contact.title">Vamos avaliar a segurança do seu ambiente?</h2>
+  <div class="contact-wrap">
+    <div class="contact-info reveal">
+      <h3 data-i18n="contact.heading">Sua empresa precisa de uma avaliação?</h3>
+      <p data-i18n="contact.desc">Sua empresa possui uma aplicação, API, infraestrutura ou ambiente cloud que precisa ser avaliado? Converse com Alex Vance para definir o escopo adequado.</p>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉</div>
+        <div>
+          <div class="contact-item-label" data-i18n="contact.emailLabel">E-mail</div>
+          <div class="contact-item-value" data-i18n="contact.emailValue">contato@vancesecurity.com.br</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🌐</div>
+        <div>
+          <div class="contact-item-label" data-i18n="contact.serviceAreaLabel">Atendimento</div>
+          <div class="contact-item-value" data-i18n="contact.serviceAreaValue">Brasil · Remoto</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🔐</div>
+        <div>
+          <div class="contact-item-label" data-i18n="contact.scopeLabel">Escopo</div>
+          <div class="contact-item-value" data-i18n="contact.scopeValue">Avaliações realizadas exclusivamente mediante autorização.</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🛡️</div>
+        <div>
+          <div class="contact-item-label" data-i18n="contact.roleLabel">Atuação</div>
+          <div class="contact-item-value" data-i18n="contact.roleValue">Pentest · Security Assessment · Cloud Security · Red Team</div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);">
+        <p style="font-family: 'Share Tech Mono', monospace; font-size: 13px; color: var(--green);" id="contactSecStatus">
+          SECURITY STATUS<br>
+          [+] SECURE CHANNEL ........ ONLINE<br>
+          [+] ASSESSMENT ............ AVAILABLE<br>
+          [+] RESPONSE .............. READY<br>
+          <span style="color:var(--red)">[+] AUTHORIZATION ......... REQUIRED</span>
+        </p>
+      </div>
+    </div>
+    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label data-i18n="contact.form.idLabel">// IDENTIFICADOR</label>
+        <input type="text" required placeholder="Seu nome / Empresa" data-i18n-placeholder="contact.form.idPlaceholder">
+      </div>
+      <div class="form-group">
+        <label data-i18n="contact.form.channelLabel">// CANAL DE COMUNICAÇÃO</label>
+        <input type="email" required placeholder="seu@email.com" data-i18n-placeholder="contact.form.channelPlaceholder">
+      </div>
+      <div class="form-group">
+        <label data-i18n="contact.form.subjectLabel">// ASSUNTO</label>
+        <input type="text" required placeholder="Tipo de avaliação desejada" data-i18n-placeholder="contact.form.subjectPlaceholder">
+      </div>
+      <div class="form-group">
+        <label data-i18n="contact.form.scopeLabel">// ESCOPO (OPCIONAL)</label>
+        <textarea placeholder="Descreva brevemente o ambiente a ser avaliado..." data-i18n-placeholder="contact.form.scopePlaceholder"></textarea>
+      </div>
+      <button type="submit" class="btn primary" data-i18n="contact.form.submitBtn">Solicitar Avaliação →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div data-i18n="footer.copy">© 2026 Alex Vance // SECURITY ASSESSMENT</div>
+  <div data-i18n="footer.motto">Encontrar falhas. Reduzir riscos. Fortalecer sistemas.</div>
+  <div class="socials">
+    <a href="#" class="social">In</a>
+    <a href="#" class="social">Gh</a>
+    <a href="#" class="social">X</a>
+  </div>
+</footer>
+
+<!-- Case Modal -->
+<div id="caseModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">X</button>
+    <div class="modal-header">
+      <div class="modal-tag" id="modalTag">WEB PENTEST</div>
+      <h2 class="modal-title" id="modalTitle">Operação Nightfall</h2>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- Injetado via JS -->
+    </div>
+  </div>
+</div>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>
