@@ -13,7 +13,7 @@
 [![PRs Bem-vindos](https://img.shields.io/badge/PRs-welcome-00ff41?style=flat-square)](http://makeapullrequest.com)
 [![Desenvolvido com](https://img.shields.io/badge/made%20with-HTML%2FCSS%2FJS-ff0040?style=flat-square)](https://developer.mozilla.org/)
 
-[🚀 Demonstração ao Vivo](https://mscbuild.github.io/about/cyber.html) • [📦 Instalação](#-instalação) • [🎨 Recursos](#-recursos) • [🛠️ Tecnologias](#-tecnologias) • [📖 Documentação](#-documentação) • [🤝 Contribuição](#-contribuição)
+[🚀 Demonstração ao Vivo](https://portfoliohacker.vercel.app/) • [📦 Instalação](#-instalação) • [🎨 Recursos](#-recursos) • [🛠️ Tecnologias](#-tecnologias) • [📖 Documentação](#-documentação) • [🤝 Contribuição](#-contribuição)
 
 </div>
 
@@ -61,7 +61,7 @@ Construído com uma **estética inspirada em terminais**, o portfólio apresenta
 
 Confira a versão online:
 
-**[cyber-portfolio.demo](https://mscbuild.github.io/about/cyber.html)**
+**[cyber-portfolio.demo](https://portfoliohacker.vercel.app/)**
 
 > ⚠️ **Observação:** A demonstração utiliza conteúdo de exemplo. Faça um fork do repositório e personalize-o com suas próprias informações.
 
@@ -71,7 +71,7 @@ Confira a versão online:
 
 ### ✨ Efeitos Visuais
 
-* **Rede de Partículas 3D** — Gráfico de nós animados com efeito de paralaxe controlado pelo mouse
+* **Rede de Partículas 3D** — Gráfico de nós animados com efeito de parallax controlado pelo mouse
 * **Icosaedro em Wireframe** — Formas geométricas rotativas
 * **Chuva Matrix** — Clássico efeito de caracteres caindo no fundo
 * **Overlay de Scanlines** — Simulação de monitor CRT
@@ -115,7 +115,7 @@ Confira a versão online:
 
 <div align="center">
 
-<img width="1343" height="600" alt="Captura de tela do portfólio CYBER" src="https://github.com/user-attachments/assets/2fa5718d-30f3-4578-b3e7-3ac93353d4e3" />
+<img width="1343" height="600" alt="Captura de tela do portfólio CYBER" src="https://github.com/celioantonio7/portfoliohacker/blob/main/Captura%20de%20tela_2026-09-01_09-17-20.png" />
 
 </div>
 
@@ -154,10 +154,10 @@ Confira a versão online:
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/mscbuild/web-portfolio.git
+git clone https://github.com/celioantonio7/portfoliohacker.git
 
 # Entrar no diretório do projeto
-cd web-portfolio
+cd portfoliohacker
 ```
 
 ---
