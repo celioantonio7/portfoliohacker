@@ -1,0 +1,238 @@
+{
+  "pageTitle": "Alex Vance // Elite Cybersecurity Portfolio",
+  "nav": {
+    "name": "Alex Vance",
+    "home": "Home",
+    "about": "Profile",
+    "skills": "Specialties",
+    "services": "Services",
+    "projects": "Cases",
+    "contact": "Contact",
+    "status": "SECURE // ONLINE",
+    "lightMode": "LIGHT_MODE",
+    "darkMode": "DARK_MODE",
+    "lang": "EN"
+  },
+  "hero": {
+    "tag": "OFFENSIVE CYBERSECURITY SPECIALIST",
+    "title": "Alex Vance",
+    "subtitle": "> Finding vulnerabilities before they turn into incidents_",
+    "description": "Pentesting, application security, APIs, infrastructure, and cloud environments. Technical risk-oriented assessments for organizations needing to discover, prioritize, and remediate vulnerabilities prior to exploitation.",
+    "btnServices": "Explore Services →",
+    "btnContact": "Request Assessment"
+  },
+  "about": {
+    "sub": "ABOUT // PROFILE",
+    "title": "Offensive security with defensive vision",
+    "terminalHeader": "root@vance-sec:~# ./profile.sh",
+    "cmdWhoami": "whoami",
+    "outWhoami": "security_assessment_specialist",
+    "cmdSpecs": "cat specialties.txt",
+    "cmdMethod": "cat methodology.txt",
+    "specs": [
+      "[+] Web & API Pentesting",
+      "[+] Network Security",
+      "[+] Cloud Security",
+      "[+] Vulnerability Assessment",
+      "[+] Threat Hunting",
+      "[+] Security Architecture"
+    ],
+    "method": [
+      "[+] Reconnaissance",
+      "[+] Attack Surface Mapping",
+      "[+] Technical Validation",
+      "[+] Controlled Exploitation",
+      "[+] Impact Analysis",
+      "[+] Remediation"
+    ],
+    "heading": "Find flaws.<br>Reduce risks.<br>Fortify systems.",
+    "p1": "Specializing in offensive security assessments, vulnerability analysis, and tech environment reviews. My work combines technical reconnaissance, manual validation, impact analysis, and practical remediation guidelines.",
+    "p2": "The methodology leverages industry-standard frameworks, including OWASP Top 10, MITRE ATT&CK, and CVSS, turning complex technical findings into clear security priorities for engineering teams and management.",
+    "stat1Label": "Technical Assessments*",
+    "stat2Label": "Security Findings*",
+    "stat3Label": "Findings Remediated*",
+    "statNote": "*Demonstrative indicators used exclusively for this presentation."
+  },
+  "skills": {
+    "sub": "CAPABILITIES // SPECIALTIES",
+    "title": "Technical Expertise",
+    "webApi": {
+      "name": "Web & API Pentesting",
+      "desc": "Assessment of web apps and APIs focusing on authentication, authorization, access control, and data exposure."
+    },
+    "network": {
+      "name": "Network Security",
+      "desc": "Evaluation of attack surface exposure, services, configurations, network segmentation, and access controls."
+    },
+    "cloud": {
+      "name": "Cloud Security",
+      "desc": "Assessment of AWS, Azure, and GCP environments focusing on identity, permissions, network, and workloads."
+    },
+    "vuln": {
+      "name": "Vulnerability Assessment",
+      "desc": "Mapping, validation, and prioritization of vulnerabilities using severity scoring metrics such as CVSS 4.0."
+    },
+    "hunting": {
+      "name": "Threat Hunting",
+      "desc": "Proactive investigation of suspicious behaviors, indicators of compromise, and malicious activity signals."
+    },
+    "arch": {
+      "name": "Security Architecture",
+      "desc": "Architectural review and recommendations to enhance identity management, data protection, and security controls."
+    }
+  },
+  "services": {
+    "sub": "SERVICES // OPERATIONS",
+    "title": "Tailored Security Assessments",
+    "pentest": {
+      "title": "Pentest",
+      "desc": "Identification and controlled validation of security flaws across applications and infrastructure.",
+      "items": ["Web Applications & APIs", "Infrastructure & Networks", "Cloud Environments", "Remediation Guidance"]
+    },
+    "redteam": {
+      "title": "Red Team",
+      "desc": "Controlled adversary simulations to evaluate an organization's detection and response capabilities.",
+      "items": ["Surface Mapping", "Threat Simulation", "Detection Testing", "MITRE ATT&CK"]
+    },
+    "cloud": {
+      "title": "Cloud Security",
+      "desc": "Evaluating security posture across cloud environments and cloud-native architecture.",
+      "items": ["AWS / Azure / GCP", "IAM & Storage", "Containers & Network", "Security Benchmarks"]
+    },
+    "vuln": {
+      "title": "Vulnerability Assessment",
+      "desc": "Discovery and prioritization of security gaps using clear risk-driven metrics.",
+      "items": ["Asset Inventory", "Scanning & Manual Checks", "Risk Rating", "Remediation Plan"]
+    },
+    "incident": {
+      "title": "Incident Response",
+      "desc": "Technical support for rapid incident investigation, containment, and root cause analysis.",
+      "items": ["Evidence Analysis", "Containment & Investigation", "Indicators of Compromise", "Post-Incident Analysis"]
+    },
+    "awareness": {
+      "title": "Security Awareness",
+      "desc": "Targeted security training programs for developer teams and organizational staff.",
+      "items": ["Secure Coding for Devs", "Authorized Phishing Drills", "Workshops & Best Practices", "Security Culture"]
+    }
+  },
+  "projects": {
+    "sub": "OPERATIONS // CASES",
+    "title": "Demonstrative Projects",
+    "viewCase": "[VIEW CASE →]",
+    "nightfall": {
+      "tag": "WEB PENTEST",
+      "title": "Operation Nightfall",
+      "desc": "Demonstrative assessment of a fictitious corporate application with access control vulnerabilities.",
+      "modal": {
+        "p1": "Demonstrative assessment of a fictitious corporate application.",
+        "p2": "During the assessment, key issues were identified regarding access control, data exposure, and input sanitization.",
+        "h4_1": "Findings",
+        "results": [
+          "Authentication bypass on admin panel (Critical)",
+          "Customer PII exposure via IDOR (High)",
+          "SQL Injection on search endpoints (High)"
+        ],
+        "h4_2": "Recommendations",
+        "rec": "Implementation of strict Role-Based Access Control (RBAC), centralized input validation, and authorization architecture overhaul."
+      }
+    },
+    "ironcloud": {
+      "tag": "CLOUD SECURITY",
+      "title": "Project Iron Cloud",
+      "desc": "Demonstrative assessment of fictitious cloud infrastructure evaluating permissions and resource exposure.",
+      "modal": {
+        "p1": "Demonstrative assessment of a fictitious cloud infrastructure.",
+        "p2": "Objective: evaluate identity management, permissions, resource exposure, storage, and network boundaries in a distributed ecosystem.",
+        "h4_1": "Findings",
+        "results": [
+          "Public S3 buckets containing sensitive backups (Critical)",
+          "Overly permissive IAM policies (Wildcards) (High)",
+          "Privileged containers in production cluster (Medium)"
+        ],
+        "h4_2": "Recommendations",
+        "rec": "Enforce Principle of Least Privilege (PoLP) on IAM roles, isolate workloads into distinct VPCs, and block public S3 access."
+      }
+    },
+    "blackbox": {
+      "tag": "RED TEAM",
+      "title": "Operation Blackbox",
+      "desc": "Controlled adversary simulation assessing team prevention, detection, and response capabilities.",
+      "modal": {
+        "p1": "Controlled adversary simulation against a fictitious enterprise.",
+        "p2": "Designed to evaluate security team detection and response capabilities using real-world adversary tactics.",
+        "h4_1": "Findings",
+        "results": [
+          "Initial entry achieved via Spear Phishing (High)",
+          "Lateral movement executed via Pass-the-Hash (Critical)",
+          "SOC Average Detection Time: 72 hours"
+        ],
+        "h4_2": "Recommendations",
+        "rec": "Enhance EDR detection coverage, harden Active Directory domain policies, and deliver intensive anti-phishing drills."
+      }
+    },
+    "apisentinel": {
+      "tag": "API SECURITY",
+      "title": "API Sentinel",
+      "desc": "Demonstrative assessment of a corporate B2B API focusing on authentication and data exposure.",
+      "modal": {
+        "p1": "Demonstrative assessment of a fictitious corporate B2B API.",
+        "p2": "Focused on identifying broken authentication, authorization gaps, data exposure, and lack of rate limiting.",
+        "h4_1": "Findings",
+        "results": [
+          "BOLA (Broken Object Level Authorization) detected (Critical)",
+          "Missing rate limiting on authentication routes (High)",
+          "Stack trace exposure in error responses (Low)"
+        ],
+        "h4_2": "Recommendations",
+        "rec": "Enforce object-level authorization (IDOR) checks across sensitive endpoints, deploy API Gateway rate-limiting, and mask stack traces."
+      }
+    }
+  },
+  "contact": {
+    "sub": "CONTACT // SECURE CHANNEL",
+    "title": "Ready to assess your environment's security?",
+    "heading": "Does your enterprise need an assessment?",
+    "desc": "Does your organization have an application, API, infrastructure, or cloud setup requiring review? Connect with Alex Vance to define the proper scope.",
+    "emailLabel": "E-mail",
+    "emailValue": "contact@vancesecurity.com.br",
+    "serviceAreaLabel": "Location",
+    "serviceAreaValue": "Worldwide · Remote",
+    "scopeLabel": "Scope",
+    "scopeValue": "Assessments conducted exclusively under explicit authorization.",
+    "roleLabel": "Domain",
+    "roleValue": "Pentest · Security Assessment · Cloud Security · Red Team",
+    "secStatusHeader": "SECURITY STATUS",
+    "secChannel": "[+] SECURE CHANNEL ........ ONLINE",
+    "secAssessment": "[+] ASSESSMENT ............ AVAILABLE",
+    "secResponse": "[+] RESPONSE .............. READY",
+    "secAuth": "[+] AUTHORIZATION ......... REQUIRED",
+    "form": {
+      "idLabel": "// IDENTIFIER",
+      "idPlaceholder": "Your name / Company",
+      "channelLabel": "// COMMUNICATION CHANNEL",
+      "channelPlaceholder": "you@domain.com",
+      "subjectLabel": "// SUBJECT",
+      "subjectPlaceholder": "Desired assessment type",
+      "scopeLabel": "// SCOPE (OPTIONAL)",
+      "scopePlaceholder": "Briefly describe the target environment...",
+      "submitBtn": "Request Assessment →",
+      "encrypting": "Encrypting...",
+      "success": "✓ Transmitted Securely"
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Alex Vance // SECURITY ASSESSMENT",
+    "motto": "Find flaws. Reduce risks. Fortify systems."
+  },
+  "splash": {
+    "bypass": "[ FAST_ACCESS ]",
+    "hint": "💡 Type <span class=\"highlight-cmd\">sudo start</span> or press <strong>Enter</strong> to boot the system.",
+    "booting": "[+] Initializing VANCE_SEC_OS v4.0.9...",
+    "fetching": "[+] Downloading data & security packages...",
+    "modules": "[+] Loading offensive & defensive modules...",
+    "network": "[+] Connecting encrypted TLS channel... OK",
+    "authReq": "[!] AUTHENTICATION REQUIRED. Type a command to initialize.",
+    "accessGranted": "[+] ACCESS GRANTED! Loading portfolio system...",
+    "unknownCmd": "Unknown command. Type 'sudo start' or press Enter."
+  }
+}

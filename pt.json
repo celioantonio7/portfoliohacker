@@ -1,0 +1,238 @@
+{
+  "pageTitle": "Alex Vance // Elite Cybersecurity Portfolio",
+  "nav": {
+    "name": "Alex Vance",
+    "home": "Home",
+    "about": "Perfil",
+    "skills": "Especialidades",
+    "services": "Serviços",
+    "projects": "Cases",
+    "contact": "Contato",
+    "status": "SECURE // ONLINE",
+    "lightMode": "LIGHT_MODE",
+    "darkMode": "DARK_MODE",
+    "lang": "PT"
+  },
+  "hero": {
+    "tag": "ESPECIALISTA EM CIBERSEGURANÇA OFENSIVA",
+    "title": "Alex Vance",
+    "subtitle": "> Encontrar vulnerabilidades antes que elas se tornem incidentes_",
+    "description": "Pentest, segurança de aplicações, APIs, infraestrutura e ambientes cloud. Avaliações técnicas orientadas a risco para empresas que precisam descobrir, priorizar e corrigir vulnerabilidades antes que sejam exploradas.",
+    "btnServices": "Conhecer os serviços →",
+    "btnContact": "Solicitar uma avaliação"
+  },
+  "about": {
+    "sub": "SOBRE // PERFIL",
+    "title": "Segurança ofensiva com visão defensiva",
+    "terminalHeader": "root@vance-sec:~# ./perfil.sh",
+    "cmdWhoami": "whoami",
+    "outWhoami": "security_assessment_specialist",
+    "cmdSpecs": "cat especialidades.txt",
+    "cmdMethod": "cat metodologia.txt",
+    "specs": [
+      "[+] Pentest Web & API",
+      "[+] Segurança de Redes",
+      "[+] Cloud Security",
+      "[+] Vulnerability Assessment",
+      "[+] Threat Hunting",
+      "[+] Security Architecture"
+    ],
+    "method": [
+      "[+] Reconhecimento",
+      "[+] Mapeamento da superfície de ataque",
+      "[+] Validação técnica",
+      "[+] Exploração controlada",
+      "[+] Análise de impacto",
+      "[+] Remediação"
+    ],
+    "heading": "Encontrar falhas.<br>Reduzir riscos.<br>Fortalecer sistemas.",
+    "p1": "Atuo com avaliações de segurança ofensiva, análise de vulnerabilidades e revisão de ambientes tecnológicos. O trabalho combina reconhecimento técnico, validação manual, análise de impacto e recomendações práticas de correção.",
+    "p2": "A metodologia utiliza referências reconhecidas pela indústria, incluindo OWASP Top 10, MITRE ATT&CK e CVSS, permitindo transformar descobertas técnicas em prioridades de segurança compreensíveis para equipes técnicas e gestores.",
+    "stat1Label": "Avaliações Técnicas*",
+    "stat2Label": "Achados de Segurança*",
+    "stat3Label": "Achados Remediados*",
+    "statNote": "*Indicadores demonstrativos utilizados exclusivamente nesta apresentação."
+  },
+  "skills": {
+    "sub": "CAPACIDADES // ESPECIALIDADES",
+    "title": "Expertise Técnica",
+    "webApi": {
+      "name": "Pentest Web & API",
+      "desc": "Avaliação de aplicações web e APIs com foco em autenticação, autorização, controle de acesso e exposição de dados."
+    },
+    "network": {
+      "name": "Segurança de Redes",
+      "desc": "Avaliação da superfície de exposição, serviços, configurações, segmentação de rede e controles de acesso."
+    },
+    "cloud": {
+      "name": "Cloud Security",
+      "desc": "Avaliação de ambientes AWS, Azure e GCP, com foco em identidade, permissões, redes e workloads."
+    },
+    "vuln": {
+      "name": "Vulnerability Assessment",
+      "desc": "Mapeamento, validação e priorização de vulnerabilidades utilizando métricas de severidade como o CVSS 4.0."
+    },
+    "hunting": {
+      "name": "Threat Hunting",
+      "desc": "Investigação proativa de comportamentos suspeitos e possíveis sinais de atividade maliciosa."
+    },
+    "arch": {
+      "name": "Security Architecture",
+      "desc": "Análise de arquitetura e recomendações para melhorar gestão de identidade, proteção de dados e controles."
+    }
+  },
+  "services": {
+    "sub": "SERVIÇOS // OPERAÇÕES",
+    "title": "Avaliações de segurança sob medida",
+    "pentest": {
+      "title": "Pentest",
+      "desc": "Identificação e validação controlada de vulnerabilidades em sistemas e aplicações.",
+      "items": ["Aplicações Web & APIs", "Infraestrutura & Redes", "Ambientes Cloud", "Recomendações de correção"]
+    },
+    "redteam": {
+      "title": "Red Team",
+      "desc": "Simulações controladas de adversários para avaliar a capacidade de prevenir, detectar e responder a ataques.",
+      "items": ["Mapeamento de superfície", "Simulação de ameaças", "Testes de detecção", "MITRE ATT&CK"]
+    },
+    "cloud": {
+      "title": "Cloud Security",
+      "desc": "Avaliação da postura de segurança dos ambientes cloud e arquitetura em nuvem.",
+      "items": ["AWS / Azure / GCP", "IAM & Storage", "Containers & Network", "Configurações de segurança"]
+    },
+    "vuln": {
+      "title": "Vulnerability Assessment",
+      "desc": "Descoberta e priorização de vulnerabilidades utilizando métricas claras e orientadas a risco.",
+      "items": ["Inventário de ativos", "Scanning & Validação manual", "Classificação de risco", "Plano de remediação"]
+    },
+    "incident": {
+      "title": "Incident Response",
+      "desc": "Apoio técnico na investigação e resposta a incidentes de segurança de forma rápida e eficiente.",
+      "items": ["Análise de evidências", "Contenção & Investigação", "Indicadores de comprometimento", "Análise pós-incidente"]
+    },
+    "awareness": {
+      "title": "Security Awareness",
+      "desc": "Programas de conscientização e treinamento para equipes técnicas e colaboradores.",
+      "items": ["Segurança para desenvolvedores", "Phishing simulado autorizado", "Workshops & Boas práticas", "Cultura de segurança"]
+    }
+  },
+  "projects": {
+    "sub": "OPERAÇÕES // CASES",
+    "title": "Projetos Demonstrativos",
+    "viewCase": "[VER CASE →]",
+    "nightfall": {
+      "tag": "WEB PENTEST",
+      "title": "Operação Nightfall",
+      "desc": "Avaliação demonstrativa de uma aplicação corporativa fictícia com problemas de controle de acesso.",
+      "modal": {
+        "p1": "Avaliação demonstrativa de uma aplicação corporativa fictícia.",
+        "p2": "Durante o assessment foram identificados problemas relacionados a controle de acesso, exposição de informações e validação de entradas.",
+        "h4_1": "Resultados Obtidos",
+        "results": [
+          "Bypass de autenticação em painel administrativo (Crítico)",
+          "Exposição de PII de clientes através de IDOR (Alto)",
+          "Injeção de SQL em endpoints de busca (Alto)"
+        ],
+        "h4_2": "Recomendações",
+        "rec": "Implementação de controle de acesso baseado em funções (RBAC) estrito, validação de inputs centralizada e revisão completa da arquitetura de autorização."
+      }
+    },
+    "ironcloud": {
+      "tag": "CLOUD SECURITY",
+      "title": "Project Iron Cloud",
+      "desc": "Assessment demonstrativo de infraestrutura cloud fictícia avaliando permissões e exposição de recursos.",
+      "modal": {
+        "p1": "Assessment demonstrativo de uma infraestrutura cloud fictícia.",
+        "p2": "O objetivo foi avaliar identidade, permissões, exposição de recursos, armazenamento e controles de rede em um ambiente altamente distribuído.",
+        "h4_1": "Resultados Obtidos",
+        "results": [
+          "Buckets S3 públicos contendo backups sensíveis (Crítico)",
+          "Políticas IAM excessivamente permissivas (Wildcards) (Alto)",
+          "Contêineres rodando em modo privilegiado (Médio)"
+        ],
+        "h4_2": "Recomendações",
+        "rec": "Aplicação do princípio do menor privilégio (PoLP) nas roles IAM, isolamento de workloads em VPCs separadas e bloqueio de acesso público ao S3."
+      }
+    },
+    "blackbox": {
+      "tag": "RED TEAM",
+      "title": "Operação Blackbox",
+      "desc": "Simulação controlada de adversário para avaliar capacidade de prevenção, detecção e resposta da equipe.",
+      "modal": {
+        "p1": "Simulação controlada de adversário contra uma organização fictícia.",
+        "p2": "O exercício teve como objetivo avaliar a capacidade de prevenção, detecção e resposta da equipe de segurança, utilizando táticas de ameaças persistentes reais.",
+        "h4_1": "Resultados Obtidos",
+        "results": [
+          "Acesso inicial via Spear Phishing bem sucedido (Alto)",
+          "Movimentação lateral via Pass-the-Hash (Crítico)",
+          "Tempo médio de detecção pelo SOC: 72 horas"
+        ],
+        "h4_2": "Recomendações",
+        "rec": "Melhoria contínua de detecção EDR, hardening de Active Directory, e treinamento intensivo de conscientização anti-phishing."
+      }
+    },
+    "apisentinel": {
+      "tag": "API SECURITY",
+      "title": "API Sentinel",
+      "desc": "Avaliação demonstrativa de uma API corporativa com foco em autenticação e exposição de dados.",
+      "modal": {
+        "p1": "Avaliação demonstrativa de uma API corporativa B2B fictícia.",
+        "p2": "O foco foi identificar problemas de autenticação, autorização, exposição de dados e ausência de rate-limiting.",
+        "h4_1": "Resultados Obtidos",
+        "results": [
+          "BOLA (Broken Object Level Authorization) detectado (Crítico)",
+          "Ausência de rate limiting em rotas de login (Alto)",
+          "Exposição de stack traces em mensagens de erro (Baixo)"
+        ],
+        "h4_2": "Recomendações",
+        "rec": "Implementar verificação de autorização a nível de objeto (IDOR) em todos os endpoints sensíveis, configurar API Gateway com rate limiting e mascarar mensagens de erro em produção."
+      }
+    }
+  },
+  "contact": {
+    "sub": "CONTATO // CANAL SEGURO",
+    "title": "Vamos avaliar a segurança do seu ambiente?",
+    "heading": "Sua empresa precisa de uma avaliação?",
+    "desc": "Sua empresa possui uma aplicação, API, infraestrutura ou ambiente cloud que precisa ser avaliado? Converse com Alex Vance para definir o escopo adequado.",
+    "emailLabel": "E-mail",
+    "emailValue": "contato@vancesecurity.com.br",
+    "serviceAreaLabel": "Atendimento",
+    "serviceAreaValue": "Brasil · Remoto",
+    "scopeLabel": "Escopo",
+    "scopeValue": "Avaliações realizadas exclusivamente mediante autorização.",
+    "roleLabel": "Atuação",
+    "roleValue": "Pentest · Security Assessment · Cloud Security · Red Team",
+    "secStatusHeader": "SECURITY STATUS",
+    "secChannel": "[+] SECURE CHANNEL ........ ONLINE",
+    "secAssessment": "[+] ASSESSMENT ............ AVAILABLE",
+    "secResponse": "[+] RESPONSE .............. READY",
+    "secAuth": "[+] AUTHORIZATION ......... REQUIRED",
+    "form": {
+      "idLabel": "// IDENTIFICADOR",
+      "idPlaceholder": "Seu nome / Empresa",
+      "channelLabel": "// CANAL DE COMUNICAÇÃO",
+      "channelPlaceholder": "seu@email.com",
+      "subjectLabel": "// ASSUNTO",
+      "subjectPlaceholder": "Tipo de avaliação desejada",
+      "scopeLabel": "// ESCOPO (OPCIONAL)",
+      "scopePlaceholder": "Descreva brevemente o ambiente a ser avaliado...",
+      "submitBtn": "Solicitar Avaliação →",
+      "encrypting": "Criptografando...",
+      "success": "✓ Transmitido com Segurança"
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Alex Vance // SECURITY ASSESSMENT",
+    "motto": "Encontrar falhas. Reduzir riscos. Fortalecer sistemas."
+  },
+  "splash": {
+    "bypass": "[ FAST_ACCESS ]",
+    "hint": "💡 Digite <span class=\"highlight-cmd\">sudo start</span> ou pressione <strong>Enter</strong> para inicializar o sistema.",
+    "booting": "[+] Inicializando VANCE_SEC_OS v4.0.9...",
+    "fetching": "[+] Baixando pacotes de dados e segurança...",
+    "modules": "[+] Carregando módulos ofensivos e defensivos...",
+    "network": "[+] Conectando canal TLS criptografado... OK",
+    "authReq": "[!] AUTENTICAÇÃO NECESSÁRIA. Digite um comando para iniciar.",
+    "accessGranted": "[+] ACESSO AUTORIZADO! Carregando o sistema...",
+    "unknownCmd": "Comando não reconhecido. Digite 'sudo start' ou pressione Enter."
+  }
+}
